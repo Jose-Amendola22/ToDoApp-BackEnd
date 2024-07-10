@@ -1,6 +1,7 @@
 import jsonschema
 from jsonschema import validate
 
+#Aquí se hacen validaciones básicas de los objetos tasks
 task_schema = {
     "type": "object",
     "properties": {
@@ -13,4 +14,5 @@ task_schema = {
 }
 
 def validate_task(data):
+    #Se usa el task_schema para validar los campos de prueba
     validate(instance=data, schema=task_schema)
